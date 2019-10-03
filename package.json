@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.18",
+    "@types/d3": "^5.7.2",
     "@types/node": "12.7.5",
     "@types/react": "16.9.2",
+    "@types/react-bootstrap": "^0.32.20",
     "@types/react-dom": "16.9.0",
+    "@types/reactstrap": "^8.0.4",
+    "d3": "^5.12.0",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.13",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
+    "reactstrap": "^8.0.1",
     "typescript": "3.6.3"
   },
   "scripts": {
@@ -32,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "react-test-renderer": "^16.9.0"
   }
 }

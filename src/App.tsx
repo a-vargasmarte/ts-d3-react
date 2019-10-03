@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Component } from "react";
+import logo from "./logo.svg";
+import ChartWrapper from "./ChartWrapper";
+import * as d3 from "d3";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import GenderDropDown from "./GenderDropDown";
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export interface Props {
+  width: number;
+  height: number;
+}
+
+export interface State {
+  gender: string;
+}
+
+class App extends Component {
+  state = {
+    gender: "men"
+  };
+
+  genderSelected = (gender: string) => this.setState({ gender });
+  render() {
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Col xs={12}>
+              <GenderDropDown genderSelected={this.genderSelected} />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <ChartWrapper />
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
 }
 
 export default App;
