@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Component } from "react";
-import logo from "./logo.svg";
 import ChartWrapper from "./ChartWrapper";
-import * as d3 from "d3";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
@@ -17,7 +15,7 @@ export interface State {
   gender: string;
 }
 
-class App extends Component {
+class App extends Component<{}, State> {
   state = {
     gender: "men"
   };
@@ -34,7 +32,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12}>
-              <ChartWrapper />
+              <ChartWrapper gender={this.state.gender} />
             </Col>
           </Row>
         </Container>

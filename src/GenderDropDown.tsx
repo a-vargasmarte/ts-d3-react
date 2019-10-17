@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap";
+import Dropdown from "react-bootstrap/Dropdown";
 
 interface dropdownProps {
   genderSelected: any;
@@ -9,18 +9,18 @@ const GenderDropDown: React.FC<dropdownProps> = props => {
   let { genderSelected } = props;
   return (
     <Dropdown>
-      <DropdownToggle variant="primary" id="dropdown-basic">
+      <Dropdown.Toggle variant="primary" id="dropdown-basic">
         Please select gender
-      </DropdownToggle>
+      </Dropdown.Toggle>
 
-      <DropdownMenu>
-        <DropdownItem onSelect={() => genderSelected("men")}>
+      <Dropdown.Menu>
+        <Dropdown.Item onSelect={() => genderSelected("men")}>
           Men
-        </DropdownItem>
-        <DropdownItem onSelect={() => genderSelected("women")}>
+        </Dropdown.Item>
+        <Dropdown.Item onSelect={() => genderSelected("women")}>
           Women
-        </DropdownItem>
-      </DropdownMenu>
+        </Dropdown.Item>
+      </Dropdown.Menu>
     </Dropdown>
   );
 };
