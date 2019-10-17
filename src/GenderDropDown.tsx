@@ -8,16 +8,26 @@ interface dropdownProps {
 const GenderDropDown: React.FC<dropdownProps> = props => {
   let { genderSelected } = props;
   return (
-    <Dropdown>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
+    <Dropdown data-test="component-dropdown">
+      <Dropdown.Toggle
+        variant="primary"
+        id="dropdown-basic"
+        data-test="dropdown-toggle"
+      >
         Please select gender
       </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item onSelect={() => genderSelected("men")}>
+      <Dropdown.Menu data-test="dropdown-menu">
+        <Dropdown.Item
+          onSelect={() => genderSelected("men")}
+          data-test="dropdown-item-men"
+        >
           Men
         </Dropdown.Item>
-        <Dropdown.Item onSelect={() => genderSelected("women")}>
+        <Dropdown.Item
+          onSelect={() => genderSelected("women")}
+          data-test="dropdown-item-women"
+        >
           Women
         </Dropdown.Item>
       </Dropdown.Menu>

@@ -23,16 +23,22 @@ class App extends Component<{}, State> {
   genderSelected = (gender: string) => this.setState({ gender });
   render() {
     return (
-      <div>
+      <div data-test="component-app">
         <Container>
           <Row>
             <Col xs={12}>
-              <GenderDropDown genderSelected={this.genderSelected} />
+              <GenderDropDown
+                genderSelected={this.genderSelected}
+                data-test="component-gender-dropdown"
+              />
             </Col>
           </Row>
           <Row>
             <Col xs={12}>
-              <ChartWrapper gender={this.state.gender} />
+              <ChartWrapper
+                gender={this.state.gender}
+                data-test="chart-wrapper"
+              />
             </Col>
           </Row>
         </Container>
