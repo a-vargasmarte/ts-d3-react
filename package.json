@@ -55,7 +55,7 @@
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.2",
     "react-bootstrap": "^1.0.0-beta.13",
-    "react-dev-utils": "^9.0.3",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.9.0",
     "reactstrap": "^8.0.1",
     "resolve": "1.12.0",
